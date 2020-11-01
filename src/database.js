@@ -7,7 +7,8 @@ const DBUri = process.env.MONGODB_URI
 mongoose.connect(DBUri, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    useCreateIndex: true
+    useCreateIndex: true,
+    useFindAndModify: false
 });
 
 const connection = mongoose.connection;
